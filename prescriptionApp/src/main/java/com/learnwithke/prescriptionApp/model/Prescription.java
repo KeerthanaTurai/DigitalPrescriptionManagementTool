@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "prescriptions")
@@ -20,7 +20,7 @@ public class Prescription {
 
     private String medicationName;
     private String dosage;
-    private Date prescribedDate;
+    private LocalDate prescribedDate;
 
     @ManyToOne
     @JoinColumn(name="doctor_id", referencedColumnName = "id")
